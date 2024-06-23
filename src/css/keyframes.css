@@ -9,8 +9,13 @@
       -webkit-backdrop-filter: saturate(1.5) hue-rotate(100deg);
       backdrop-filter: saturate(1.5) hue-rotate(100deg);
     }
-    100% {
+    90% {
       background-position: 0% 94%;
+      -webkit-backdrop-filter: saturate(1.5);
+      backdrop-filter: saturate(1.5);
+    }
+    100% {
+      background-position: 100% 0%;
       -webkit-backdrop-filter: saturate(1.5);
       backdrop-filter: saturate(1.5);
     }
