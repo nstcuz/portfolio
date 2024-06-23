@@ -24,5 +24,8 @@ dist-ssr
 *.sw?
 
 #sass
-styles.css
-styles.css.map
+styles.css*
+
+
+#dont need this in the github
+.eslintrc.cjs

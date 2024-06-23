@@ -1,0 +1,30 @@
+@keyframes random-blob {
+    0% {
+      background-position: 100% 0%;
+      -webkit-backdrop-filter: saturate(1.5);
+      backdrop-filter: saturate(1.5);
+    }
+    50% {
+      background-position: 70% 7%;
+      -webkit-backdrop-filter: saturate(1.5) hue-rotate(100deg);
+      backdrop-filter: saturate(1.5) hue-rotate(100deg);
+    }
+    100% {
+      background-position: 0% 94%;
+      -webkit-backdrop-filter: saturate(1.5);
+      backdrop-filter: saturate(1.5);
+    }
+  }
+  
+  .random-blob {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    /* height: 20vw; */
+    min-height: 200px;
+    mix-blend-mode: lighten;
+    background: linear-gradient(280deg, #03f241, #d549dd, #03e5f2, #03f241);
+    background-size: 400% 400%;
+    animation: random-blob 15s ease infinite;
+  }

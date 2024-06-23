@@ -1,0 +1,11 @@
+/* stylings */
+* {
+    box-sizing: border-box;
+}
+
+#root,
+.site-wrapper,
+body {
+    height: 100vh;
+    width: 100%;
+}

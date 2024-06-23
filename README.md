@@ -1,9 +1,13 @@
-# React + Vite
+## Porfolio Site
+Hi, im **nic cousins**, a student at BCIT. Welcome.
+This is my first attempt at a portfolio site. I hope you enjoy.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Frameworks / Libraries
+React + Vite
+AnimeJS
 
-Currently, two official plugins are available:
+### stylings
+SASS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# portfolio
+### Markup
+HTML5

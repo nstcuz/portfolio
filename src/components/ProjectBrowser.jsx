@@ -1,0 +1,16 @@
+import React from 'react'
+
+const ProjectBrowser = () => {
+  return (
+    <div>
+        <div className="mockup-browser border bg-base-300">
+            <div className="mockup-browser-toolbar">
+                <p className="input">https://niccousins.com/works</p>
+            </div>
+        <div className="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+        </div>
+    </div>
+  )
+}
+
+export default ProjectBrowser

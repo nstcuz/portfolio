@@ -1,12 +1,15 @@
 import React from 'react'
-import BouncingHeader from './components/Header' 
+import MainPage from './pages/MainPage'
+import Header from './components/Header' 
+// import About from './components/About' 
 
 function App() {
 
   return (
     <>
     <div className='site-wrapper'>
-      <BouncingHeader />
+      <Header />
+      <MainPage />
     </div>
     </>
   )
