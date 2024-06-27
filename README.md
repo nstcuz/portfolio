@@ -4,10 +4,9 @@ This is my first attempt at a portfolio site. I hope you enjoy.
 
 ### Frameworks / Libraries
 React + Vite
-AnimeJS
 
 ### stylings
-SASS
+Tailwind && DaisyUI
 
 ### Markup
 HTML5
