@@ -1,64 +1,56 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     './src/components/*',
-    './src/pages/*'
+    './src/pages/*',
+    './src/App.jsx',
+    './src/Main.jsx'
   ],
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
-      colors: {
-        'softBlack': '#232323',
-      },
       fontFamily: {
-        IBMPlex: ['IBM Plex Mono', 'sans-serif'],
-        Manrope: ['Manrope', 'sans-serif']
+        Manrope: ['Manrope', 'sans-serif'],
+        IBMPlex: ['IBM Plex Mono', 'monospace'],
+        UbuntuMono: ['Ubuntu Mono', 'monospace'],
       },
-      keyframes: {
-        'random-blob': {
-          '0%': {
-            backgroundPosition: '100% 0%',
-            WebkitBackdropFilter: 'saturate(1.5)',
-            backdropFilter: 'saturate(1.5)',
-          },
-          '50%': {
-            backgroundPosition: '70% 7%',
-            WebkitBackdropFilter: 'saturate(1.5) hue-rotate(100deg)',
-            backdropFilter: 'saturate(1.5) hue-rotate(100deg)',
-          },
-          '100%': {
-            backgroundPosition: '0% 94%',
-            WebkitBackdropFilter: 'saturate(1.5)',
-            backdropFilter: 'saturate(1.5)',
-          },
-        },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
       },
-      animation: {
-        'random-blob': 'random-blob 15s ease infinite',
+      colors: {
+        // Primary:
+        // Secondary:
+        // Accent:
+        // Neutral:
+        // Base-100:
+        // Base-200:
+        // Base-300:
+        // Info:
+        // Success:
+        // Warning:
+        // Error:
+      },
+      height: {
+        heightHome: 'calc(100vh - 6rem)',
+        // heightNav: 'calc(100vh + 1rem)',
+      },
+      width: {
+        aboutListW: 'calc(100vw - 2rem)',
       },
     },
   },
-  plugins: [require("daisyui")],
-
-  daisyui: { // daisy config is optional...
-    themes: ["pastel"
-    // Primary:
-    // Secondary:
-    // Accent:
-    // Neutral:
-    // Base-100:
-    // Base-200:
-    // Base-300:
-    // Info:
-    // Success:
-    // Warning:
-    // Error:
-  ], // "dracula", "retro", "coffee", "pastel",
-    // themeRoot: ":root", // The element that receives theme color CSS variables
-    darkTheme: "coffee", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    // prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+  plugins: [
+    require("daisyui"), 
+  ],
+  daisyui: {
+    themes: ["pastel", "dracula"], 
+    darkTheme: "dracula",
+    base: true,
+    styled: true,
+    utils: true,
+    logs: true,
   },
-}
+};

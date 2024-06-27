@@ -7,14 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css --watch"
   },
   "dependencies": {
-    "@react-spring/web": "^9.7.3",
-    "prop-types": "^15.8.1",
+    "@tanstack/react-query": "^5.48.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.77.4"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.0",
+    "tech-stack-icons": "^2.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

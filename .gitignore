@@ -26,6 +26,11 @@ dist-ssr
 #sass
 styles.css*
 
-
 #dont need this in the github
 .eslintrc.cjs
+
+# enviroment vars
+.env
+
+#just testing stuff
+src/components/BackgroundColorChanger.jsx 
