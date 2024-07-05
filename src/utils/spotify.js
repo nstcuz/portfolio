@@ -6,9 +6,10 @@ const getAccessToken = async () => {
 
   try {
     const response = await axios.post('https://accounts.spotify.com/api/token', 
-      new URLSearchParams({
+      {
         grant_type: 'client_credentials'
-      }), {
+      }, 
+      {
         headers: {
           'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret),
           'Content-Type': 'application/x-www-form-urlencoded'

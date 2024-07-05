@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { FiRefreshCw } from 'react-icons/fi';
 import { useEffect, useState, useRef } from 'react';
 import { getPlaylist } from '../utils/spotify';
 import { getRandomTrack, getTrackArtists } from '../utils/utils';
@@ -52,7 +51,7 @@ export default function Music({ playlistId }) {
   }, [randomTrack]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <span className="loading loading-ring loading-lg"></span>
   }
 
   if (isError) {
@@ -61,22 +60,20 @@ export default function Music({ playlistId }) {
 
   if (isSuccess) {
     return (
-      <div className='p-4 mx-2 text-center border-2 border-neutral-content shadow-lg rounded-3xl'>
+      <div className='p-4 mx-2 w-full text-center shadow-lg rounded-3xl'>
         <h2>listen with me:</h2>
         <div>
           <p>{randomTrack && randomTrack.name} by {artists}</p>
-          <button className='btn btn-primary border-2 border-neutral-content click:animate-bounce' onClick={handleChangeSongClick}>random song <FiRefreshCw className='inline-block'/></button>
           {randomTrack && (
-            <div>
+            <div className='flex justify-center flex-col items-center spt:flex-row'>
               <iframe
                 ref={iframeRef}
-                className="rounded-lg bg-transparent w-full"
-                style={{ height: '280px' }}
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                className="rounded-lg bg-transparent bg-base-100 max-w-[620px] w-full h-[240px]"
+                allow="clipboard-write; encrypted-media;"
                 loading="lazy"
                 title={`Spotify Embed of ${randomTrack.name}`}
               ></iframe>
+            <button className='btn btn-primary spt:h-[232px] mb-1 border-2 border-neutral-content border-opacity-50 click:animate-bounce spt:rounded-lg rounded-3xl' onClick={handleChangeSongClick}>next track</button>
             </div>
           )}
         </div>
@@ -84,5 +81,5 @@ export default function Music({ playlistId }) {
     );
   }
 
-  return <div>Loading...</div>;
+  return <span className="loading loading-ring loading-lg"></span>
 }

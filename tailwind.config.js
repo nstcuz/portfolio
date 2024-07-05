@@ -11,10 +11,11 @@ module.exports = {
     extend: {
       fontFamily: {
         Manrope: ['Manrope', 'sans-serif'],
-        IBMPlex: ['IBM Plex Mono', 'monospace'],
+        Archivo: ['Archivo', 'sans-serif'],
         UbuntuMono: ['Ubuntu Mono', 'monospace'],
       },
       screens: {
+        spt: '450px',
         sm: '640px',
         md: '768px',
         lg: '1024px',
@@ -34,11 +35,11 @@ module.exports = {
         // Error:
       },
       height: {
-        heightHome: 'calc(100vh - 6rem)',
-        // heightNav: 'calc(100vh + 1rem)',
+        heightHome: 'calc(100vh - 5rem)',
+        heightForNav: 'calc(100vh + 5rem)',
       },
       width: {
-        aboutListW: 'calc(100vw - 2rem)',
+        widthForNav: 'calc(100vw + 5rem)',
       },
     },
   },

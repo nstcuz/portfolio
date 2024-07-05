@@ -32,8 +32,8 @@
     animation: aurora-borealis 20s ease infinite;
   }
 
-
-  @keyframes getDown{
+/* skills / tools stack item animation */
+  @keyframes get-down{
     0% {
       transform: translateY(0px);
     }
@@ -51,10 +51,41 @@
     }
   } 
 
-  .getDown:hover {
-    animation: getDown 0.5s ease-in-out 1 alternate;
+  .get-down:hover {
+    animation: get-down 0.5s ease-in-out 1 alternate;
   }
 
-  /* .getDown:touch {
-    animation: getDown 0.5s ease-in-out 1 alternate;
-  } */
+
+/* nav menu item animation   */
+  @keyframes lil-wiggle{
+    0% {
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(-1px);
+    }
+    60% {
+      transform: translateY(3px);
+    }
+    95% {
+      transform: translateY(-1px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  } 
+
+  .lil-wiggle:hover {
+    animation: get-down 0.5s ease-in-out 1 alternate;
+  }
+
+
+
+
+  @keyframes scroll-animation {
+    to { scale: 1 1; }
+  }
+
+  .scroll-animation {
+    animation: scroll-animation 1s linear;
+  }

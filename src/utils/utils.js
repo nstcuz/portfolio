@@ -1,6 +1,6 @@
 const getRandomTrack = (tracks) => {
-    const randomIndex = Math.floor(Math.random() * tracks.length);
-    return tracks[randomIndex].track;
+    const randoIndex = Math.floor(Math.random() * tracks.length);
+    return tracks[randoIndex].track;
   };
   
   const getTrackArtists = (track) => {
@@ -8,4 +8,3 @@ const getRandomTrack = (tracks) => {
   };
   
   export { getRandomTrack, getTrackArtists };
-  

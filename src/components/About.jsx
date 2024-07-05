@@ -4,20 +4,21 @@ import ToolStackIcons from './ToolStackIcons';
 import Music from '../components/Music';
 
 const About = () => {
-  const activity = {
-    // 1: `making foccasia a bit too often`, // i want to put <a> around foccasia 
-    2: 'currently riding a Hockey skateboard',
-    3: 'listening to more country music than im proud to admit',
-    4: 'continuing to do a poor job at keeping up with my skin care routine',
-    5: `enjoying the occasional pint`,
-    6: 'i like to build applications/websites, i even like to design them',
-    7: 'dislike using capital letters (willing to make an acception for you)'
-  }
+  const activity = [
+    'making <a href="#">focaccia</a> a bit too often', 
+    'currently riding a Hockey skateboard',
+    'listening to more country music than I\'m proud to admit',
+    'continuing to do a poor job keeping up with my skincare routine',
+    'enjoying the occasional pint',
+    'building applications/websites, I even like to design them',
+    'dislike using capital letters (willing to make an exception)'
+  ];
 
-  const playlistId = '27zZvhmflIf1p88NEED8DE';
+//  you can pull the playlist ID out of any playlists URL 
+  const playlistId = '2NI9LQewDkN4voYq8e9N1L';
 
   return (
-    <section className='shadow-md rounded-3xl'>
+    <section className='mt-8 shadow-md border-2 border-neutral-content rounded-3xl w-[95vw] mx-auto'>
     <div className='w-full mt-2 overflow-x-visible'>
       <div className="carousel carousel-center bg-neutral rounded-box space-x-4 p-2 mx-2">
         <div className="carousel-item max-h-[275px] w-full">
@@ -28,7 +29,7 @@ const About = () => {
         <div className="carousel-item max-h-[275px] w-full">
           <img
             src="src/assets/skate-test.png"
-            className="rounded-box object-cover object-top w-full" />
+            className="rounded-box object-cover w-full" />
         </div>
         <div className="carousel-item max-h-[275px] w-full">
           <img
@@ -46,16 +47,16 @@ const About = () => {
     <div className='p-2 mt-4 bg-base-100 flex flex-col justify-center items-center rounded-3xl'> 
       <h2 className='text-xl sm:text-2xl mb-4'>a bit about me:</h2>
       <ul className="text-sm">
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'>making focaccia a bit too often</li>
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'>{activity[2]}</li>
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'>{activity[3]}</li>
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'>{activity[4]}</li>
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'><span className='line-through'>playing beer-darts in my denim jorts </span>{activity[5]}</li>
-        <li className='w-full py-2 border-t-2 border-neutral border-dashed'>{activity[6]}</li>
-        <li className='w-full py-2 border-y-2 border-neutral border-dashed'>{activity[7]}</li>
+        {activity.map((item, index) => (
+          <li
+            key={index}
+            className={`w-full py-2 border-t-2 border-neutral border-dashed ${index === activity.length - 1 ? 'border-b-2' : ''}`}
+            dangerouslySetInnerHTML={{ __html: item }}
+          ></li>
+        ))}
       </ul>
 
-      <section className='mt-10 p-4 w-full flex flex-col justify-center items-center  bg-base-200 border-2 border-neutral-content border-opacity-50 rounded-3xl'> 
+      <section className='mt-10 p-2 pb-3 w-full flex flex-col justify-center items-center bg-base-200 border-2 border-neutral-content border-opacity-5 shadow-sm rounded-3xl'> 
         <div className='w-full'>
           <h3 className='text-center mb-4'>some software to help me get the job done:</h3>
           <TechStackIcons />
@@ -64,9 +65,9 @@ const About = () => {
           <h3 className='text-center mt-6 mb-4'>some tools that help me enjoy the software:</h3>
           <ToolStackIcons  />
         </div>
-
-        <Music playlistId={playlistId}/>
       </section>
+        <Music playlistId={playlistId}/>
+        {/* <SpotifyPlayer /> */}
     </div>
   </section>
   )
