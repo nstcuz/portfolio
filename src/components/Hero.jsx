@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Home = () => {
+const Hero = () => {
   const name = 'nic cousins';
   const title = 'front-end web developer';
 
@@ -30,4 +30,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Hero;

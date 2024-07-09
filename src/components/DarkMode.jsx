@@ -6,17 +6,21 @@ const DarkModeSwitch = () => {
     return localStorage.getItem('darkMode') === 'true';
   });
 
-    const rootEl = document.documentElement;
-    const auroraBorealis = document.getElementsByClassName('aurora-borealis');
+  const rootEl = document.documentElement;
+  const auroraBorealis = document.getElementsByClassName('aurora-borealis');
 
   useEffect(() => {
     if (darkMode) {
       rootEl.setAttribute('data-theme', 'black');
-      auroraBorealis[0].classList.add('aurora-borealis-darken');
+      if (auroraBorealis[0]) {
+        auroraBorealis[0].classList.add('aurora-borealis-darken');
+      }
     } else {
       rootEl.removeAttribute('data-theme');
       rootEl.setAttribute('data-theme', 'pastel');
-      auroraBorealis[0].classList.remove('aurora-borealis-darken');
+      if (auroraBorealis[0]) {
+        auroraBorealis[0].classList.remove('aurora-borealis-darken');
+      }
     }
     // save state in local storage
     localStorage.setItem('darkMode', darkMode);

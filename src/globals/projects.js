@@ -2,6 +2,7 @@ import StackIcon from "tech-stack-icons";
 
 const projects = [
   {
+    localURL: "card-game",
     title: "JavaScript Card Game",
     gitURL: "https://github.com/nstcuz/JSGame",
     heroImage: "src/assets/JSGame-hero.png",
@@ -9,6 +10,7 @@ const projects = [
     stack: ["html5", "sass", "js"],
   },
   {
+    localURL: "movieDB",
     title: "Movie Database",
     gitURL: "https://github.com/nstcuz/movie-database",
     heroImage: "src/assets/MovieDB-hero.png",
