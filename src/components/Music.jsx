@@ -1,9 +1,9 @@
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState, useRef } from 'react';
 import { getPlaylist } from '../utils/spotify';
 import { getRandomTrack, getTrackArtists } from '../utils/utils';
 
-const EMBEDDABLE_URL = 'https://open.spotify.com/embed/track/';
+const EMBED_URL = 'https://open.spotify.com/embed/track/';
 
 export default function Music({ playlistId }) {
   const iframeRef = useRef(null);
@@ -19,6 +19,12 @@ export default function Music({ playlistId }) {
     queryFn: () => getPlaylist(playlistId),
   });
 
+  const handleChangeSongClick = useCallback(() => {
+    const newRandomTrack = getRandomTrack(tracks);
+    setRandomTrack(newRandomTrack);
+    setArtists(getTrackArtists(newRandomTrack));
+  }, [tracks, setRandomTrack, setArtists]);
+
   useEffect(() => {
     if (isSuccess) {
       const { name, external_urls, tracks: { items } } = playlistData;
@@ -30,23 +36,14 @@ export default function Music({ playlistId }) {
 
   useEffect(() => {
     if (tracks.length > 0) {
-      const newRandomTrack = getRandomTrack(tracks);
-      setRandomTrack(newRandomTrack);
-      setArtists(getTrackArtists(newRandomTrack));
+      handleChangeSongClick(); 
     }
-  }, [tracks]);
+  }, [tracks, handleChangeSongClick]);
 
-  const handleChangeSongClick = () => {
-    if (tracks.length > 0) {
-      const newRandomTrack = getRandomTrack(tracks);
-      setRandomTrack(newRandomTrack);
-      setArtists(getTrackArtists(newRandomTrack));
-    }
-  };
 
   useEffect(() => {
     if (randomTrack && randomTrack.id) {
-      iframeRef.current.src = EMBEDDABLE_URL + randomTrack.id;
+      iframeRef.current.src = EMBED_URL + randomTrack.id;
     }
   }, [randomTrack]);
 
@@ -55,27 +52,30 @@ export default function Music({ playlistId }) {
   }
 
   if (isError) {
-    return <div>Error: {error.message}</div>;
+    console.error(error.message)
+    return <div>
+            <p>Sorry, we are having trouble reaching the spotify API right now</p>
+           </div>;
   }
 
   if (isSuccess) {
     return (
-      <div className='p-4 mx-2 w-full text-center shadow-lg rounded-3xl'>
-        <h2>listen with me:</h2>
-        <div>
-          <p>{randomTrack && randomTrack.name} by {artists}</p>
-          {randomTrack && (
-            <div className='flex justify-center flex-col items-center spt:flex-row'>
-              <iframe
-                ref={iframeRef}
-                className="rounded-lg bg-transparent bg-base-100 max-w-[620px] w-full h-[240px]"
-                allow="clipboard-write; encrypted-media;"
-                loading="lazy"
-                title={`Spotify Embed of ${randomTrack.name}`}
-              ></iframe>
-            <button className='btn btn-primary spt:h-[232px] mb-1 border-2 border-neutral-content border-opacity-50 click:animate-bounce spt:rounded-lg rounded-3xl' onClick={handleChangeSongClick}>next track</button>
-            </div>
-          )}
+      <div className='p-2 mx-2 mt-8 mb-4 w-sptWidthForMargin max-w-[880px] text-center bg-base-100 border-2 border-neutral-content border-opacity-20 shadow-sm rounded-2xl  bg-paperBG bg-opacity-10 '> 
+        <div className='mx-auto'>
+          <h2>listen with me:</h2>
+            <p>{randomTrack && randomTrack.name} by {artists}</p>
+            {randomTrack && (
+              <div className='mx-auto flex justify-around flex-col items-center gap-3 spt:flex-row'>
+                <iframe
+                  ref={iframeRef}
+                  className="rounded-lg h-screen max-h-[240px] bg-transparent w-full max-w-[620px]"
+                  allow="clipboard-write; encrypted-media;"
+                  loading="lazy"
+                  title={`Spotify Embed of ${randomTrack.name}`}
+                ></iframe>
+              <button className='btn btn-accent spt:h-[232px] w-full max-w-[180px] mb-4 border-2 border-neutral-content border-opacity-50 click:animate-bounce spt:rounded-lg rounded-3xl' onClick={handleChangeSongClick}>next track &#8634;</button>
+              </div>
+            )}
         </div>
       </div>
     );

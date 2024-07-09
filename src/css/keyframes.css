@@ -1,23 +1,23 @@
 @keyframes aurora-borealis {
     0% {
       background-position: 99% 0%;
-      -webkit-backdrop-filter: saturate(1.5);
-      backdrop-filter: saturate(1.5);
+      -webkit-backdrop-filter: saturate(1);
+      backdrop-filter: saturate(1);
     }
     50% {
       background-position: 70% 7%;
-      -webkit-backdrop-filter: saturate(1.5) hue-rotate(100deg);
-      backdrop-filter: saturate(1.5) hue-rotate(100deg);
+      -webkit-backdrop-filter: saturate(1) hue-rotate(100deg);
+      backdrop-filter: saturate(1) hue-rotate(100deg);
     }
-    80% {
+    90% {
       background-position: 90% 0%;
-      -webkit-backdrop-filter: saturate(1.5);
-      backdrop-filter: saturate(1.5);
+      -webkit-backdrop-filter: saturate(1);
+      backdrop-filter: saturate(1);
     }
     100% {
       background-position: 100% 0%;
-      -webkit-backdrop-filter: saturate(1.5);
-      backdrop-filter: saturate(1.5);
+      -webkit-backdrop-filter: saturate(1);
+      backdrop-filter: saturate(1);
     }
   }
   
@@ -29,7 +29,11 @@
     mix-blend-mode: lighten;
     background: linear-gradient(280deg, #03f241, #d549dd, #03e5f2, #03f241);
     background-size: 400% 400%;
-    animation: aurora-borealis 20s ease infinite;
+    animation: aurora-borealis 15s ease infinite;
+  }
+
+  .aurora-borealis-darken {
+    mix-blend-mode: darken;
   }
 
 /* skills / tools stack item animation */
@@ -80,12 +84,36 @@
   }
 
 
-
-
-  @keyframes scroll-animation {
-    to { scale: 1 1; }
+@keyframes pop-up {
+    0% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .scroll-animation {
-    animation: scroll-animation 1s linear;
+.pop-up {
+  animation: pop-up 1s ease-in-out;
+}
+
+/* nav overlay animation */
+
+  @keyframes nav-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100%{
+      opacity: 0.98;
+      transform: translateX(0);
+    }
+  
+  }
+
+  .nav-animation {
+    /* transform: translate(100%, 0); */
+    animation: nav-animation 0.7s cubic-bezier(0.85, 0, 0.15, 1); 
   }

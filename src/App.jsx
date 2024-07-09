@@ -7,6 +7,9 @@ import ProjectBrowser from './components/ProjectBrowser';
 // import Footer from './components/Footer';
 
 function App() {
+
+
+
   return (
     <div className='site-wrapper bg-base-100'>
       <Header />
@@ -14,7 +17,7 @@ function App() {
         <ProjectBrowser />
         <Routes>
           <Route path="/" element={<About />} />
-          {/* <Route path="/project" element={<SingleProject/>} /> */}
+          {/* <Route path="/project" element={<Project/>} /> */}
         </Routes>
       {/* <Footer /> */}
     </div>

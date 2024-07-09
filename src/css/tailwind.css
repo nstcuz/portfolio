@@ -1,9 +1,10 @@
+/* Manrope && Archivo && Ubuntu Mono */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Manrope && Archivo && Ubuntu Mono */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -11,22 +12,30 @@
 
 @layer base {
   h1 {
-    @apply font-Archivo;
+    @apply font-Archivo sm:text-7xl;
   }
 
   h2,
   h3,
   h4 {
-    @apply font-UbuntuMono
+    @apply font-UbuntuMono text-3xl;
   }
 
   p, 
   li, 
   a {
-    @apply font-Manrope;
+    @apply font-Manrope text-sm sm:text-base md:text-lg;
   }
 
   body {
-    @apply h-screen w-full scroll-smooth;
+    @apply h-screen w-full;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  .listHov {
+    @apply hover:text-accent-content;
   }
 }

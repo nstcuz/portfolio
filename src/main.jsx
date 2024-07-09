@@ -4,6 +4,7 @@ import App from './App.jsx';
 // tailwind
 import './css/styles.css';
 import './css/keyframes.css';
+import './css/tailwind.css';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
