@@ -47,7 +47,7 @@ const projects = [
     localURL: "linux-dots",
     title: ".files",
     gitURL: "https://github.com/nstcuz/arch-dots",
-    heroImage: "/assets/-hero.svg",
+    heroImage: "/assets/dotfiles-hero.png",
     description: "this is my linux config files, including a configuration for the window manager hyprland, a customized desktop theme, a taskbar designed & customized to match my specific needs. including everything from terminal customization, spotify themes, application launcher, as well as my neovim configuration, and plenty more pieces.",
     keypoints: [
       'a fun project to enhance my UI & UX experience while programming, allowing me to significant speed up my workflow with quick access key binds.',
