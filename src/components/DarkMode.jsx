@@ -11,7 +11,7 @@ const DarkModeSwitch = () => {
 
   useEffect(() => {
     if (darkMode) {
-      rootEl.setAttribute('data-theme', 'black');
+      rootEl.setAttribute('data-theme', 'dark');
       if (auroraBorealis[0]) {
         auroraBorealis[0].classList.add('aurora-borealis-darken');
       }

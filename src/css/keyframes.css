@@ -1,3 +1,4 @@
+/* HERO ANINATION */
 @keyframes aurora-borealis {
     0% {
       background-position: 99% 0%;
@@ -59,31 +60,6 @@
     animation: get-down 0.5s ease-in-out 1 alternate;
   }
 
-
-/* nav menu item animation   */
-  @keyframes lil-wiggle{
-    0% {
-      transform: translateY(0px);
-    }
-    10% {
-      transform: translateY(-1px);
-    }
-    60% {
-      transform: translateY(3px);
-    }
-    95% {
-      transform: translateY(-1px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  } 
-
-  .lil-wiggle:hover {
-    animation: get-down 0.5s ease-in-out 1 alternate;
-  }
-
-
 @keyframes pop-up {
     0% {
       opacity: 0;
@@ -110,10 +86,44 @@
       opacity: 0.98;
       transform: translateX(0);
     }
-  
   }
 
   .nav-animation {
-    /* transform: translate(100%, 0); */
     animation: nav-animation 0.7s cubic-bezier(0.85, 0, 0.15, 1); 
+  }
+
+/* about letter spread animation */
+  @keyframes letter-spread {
+    0% {
+      letter-spacing: inherit;
+    }
+    50%{
+      letter-spacing: 1px;
+    }
+    100% {
+      letter-spacing: inherit;
+    }
+  }
+
+  .letter-spread:hover {
+    animation: letter-spread 1.5s ease-in;
+  }
+
+/* background color */
+  @keyframes letter-spread {
+    0% {
+      background-color: 2;
+    }
+    33%{
+      
+    }
+    66%{
+      
+    }100% {
+      
+    }
+  }
+
+  .letter-spread:hover {
+    animation: letter-spread 1.5s ease-in;
   }

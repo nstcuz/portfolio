@@ -10,19 +10,17 @@ const HamburgerMenu = () => {
 
   useEffect(() => {
     if (isOpen) {
-      const childWidth = 2;
+      const childWidth = 4;
       anime({
         targets: '.navItem-ajs',
         translateX: childWidth,
-        delay: anime.stagger(400),
+        delay: anime.stagger(600),
         duration: 3000,
       });
     }
   }, [isOpen]);
 
   return (
-    <div>
-      {/* mobile nav */}
       <div className="relative right-4">
         <button onClick={toggleMenu} className="mt-2">
           <svg className="fill-neutral-content size-6 sm:size-7 md:size-8 " 
@@ -36,32 +34,25 @@ const HamburgerMenu = () => {
           </svg>
         </button>
         {isOpen && (
-          <div onClick={toggleMenu} className="fixed left-[-1.3rem] top-[-3.5rem] mt-2 h-heightForNav w-widthForNav backdrop-blur-xl bg-neutral-content bg-opacity-80 border-opacity-30 rounded-xl shadow-lg">
-            <ul className="nav-animation h-full w-full flex flex-col justify-center items-center">
-              <div className="w-[85%] h-[55%] flex flex-col justify-center items-center bg-info rounded-3xl shadow-xl">
-                <nav>
-                  <li className="navItem-ajs relative py-4 ml-0 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer">
-                    <p className="inline-flex border-b-2 border-b-transparent hover:border-primary hover:transform">About</p>
-                    {/* <img className="size-10 absolute right-0" src="src/assets/right-arrow.svg" alt="an arrow pointing right" /> */}
-                  </li>
-                  <li className="navItem-ajs relative py-4 ml-0 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer">
-                    <p className="inline-flex border-b-2 border-b-transparent hover:border-primary hover:transform">Projects</p>
-                    {/* <img className="size-10 absolute right-20" src="src/assets/right-arrow.svg" alt="an arrow pointing right" /> */}
-                  </li>
-                  <li className="navItem-ajs relative py-4 ml-0 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer">
-                    <p className="inline-flex border-b-2 border-b-transparent hover:border-primary hover:transform">Contact</p>
-                    {/* <img className="size-10 absolute right-20" src="src/assets/right-arrow.svg" alt="an arrow pointing right" /> */}
-                  </li>
-                  <img className="size-12 absolute top-72 right-20 cursor-pointer" 
-                      src="src/assets/close-button.svg" 
-                      alt="X close button" />
-                </nav>
-              </div>
-            </ul>
+          <div onClick={toggleMenu} className="nav-animation absolute right-[-60px] w-[280px] flex flex-col">
+              <nav className="absolute w-screen h-96 mt-[3px] flex flex-col justify-center items-center rounded-bl-3xl bg-base-100 backdrop-filter backdrop-blur-md bg-opacity-80 shadow-xl border-2 border-b-neutral-content border-l-neutral-content border-t-0">
+
+                  <a href="#project-anchor" className="navItem-ajs relative py-4 ml-24 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer">
+                    <p className="inline-flex border-b-2 border-b-transparent mr-[100px] hover:border-primary hover:transform">Projects</p>
+                    <img className="size-10 absolute inline-block" src="src/assets/right-arrow.svg" alt="an arrow pointing right" />
+                  </a>
+                  <a href="#about-anchor" className="navItem-ajs relative py-4 ml-24 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer ">
+                    <p className="inline-flex border-b-2 border-b-transparent mr-[114px] md:mr-[118px] xl:mr-[120px] hover:border-primary hover:transform">About</p>
+                    <img className="size-10 absolute inline-block" src="src/assets/right-arrow.svg" alt="an arrow pointing right" />
+                  </a>
+                  <a href="#contact" className="navItem-ajs relative py-4 ml-24 my-6 w-full text-3xl font-UbuntuMono list-none cursor-pointer">
+                    <p className="inline-flex border-b-2 border-b-transparent mr-[100px] hover:border-primary hover:transform">Contact</p>
+                    <img className="size-10 absolute inline-block" src="src/assets/right-arrow.svg" alt="an arrow pointing right" />
+                  </a>
+              </nav>
           </div>
         )}
       </div>
-    </div>
   );
 };
 

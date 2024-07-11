@@ -60,7 +60,7 @@ export default function Music({ playlistId }) {
 
   if (isSuccess) {
     return (
-      <div className='p-2 mx-2 mt-8 mb-4 w-sptWidthForMargin max-w-[880px] text-center bg-base-100 border-2 border-neutral-content border-opacity-20 shadow-sm rounded-2xl  bg-paperBG bg-opacity-10 '> 
+      <div className='p-2 mx-2 mt-8 mb-4 w-sptWidthForMargin max-w-[880px] text-center bg-base-100 border-2 border-neutral-content border-opacity-20 shadow-sm rounded-2xl bg-opacity-10 '> 
         <div className='mx-auto'>
           <h2>listen with me:</h2>
             <p>{randomTrack && randomTrack.name} by {artists}</p>
@@ -68,12 +68,12 @@ export default function Music({ playlistId }) {
               <div className='mx-auto flex justify-around flex-col items-center gap-3 spt:flex-row'>
                 <iframe
                   ref={iframeRef}
-                  className="rounded-lg h-screen max-h-[240px] bg-transparent w-full max-w-[620px]"
+                  className="rounded-lg h-screen max-h-[240px] bg-opacity-1 w-full max-w-[620px]"
                   allow="clipboard-write; encrypted-media;"
                   loading="lazy"
                   title={`Spotify Embed of ${randomTrack.name}`}
                 ></iframe>
-              <button className='btn btn-accent spt:h-[232px] w-full max-w-[180px] mb-4 border-2 border-neutral-content border-opacity-50 click:animate-bounce spt:rounded-lg rounded-3xl' onClick={handleChangeSongClick}>next track &#8634;</button>
+              <button className='btn btn-accent spt:h-[232px] w-full max-w-[180px] mb-4 border-2 border-neutral-content border-opacity-50 click:animate-bounce spt:rounded-lg' onClick={handleChangeSongClick}>next track &#8634;</button>
               </div>
             )}
         </div>

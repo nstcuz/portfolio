@@ -5,9 +5,35 @@
 @tailwind components;
 @tailwind utilities;
 
-
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+.project-center {
+  position: relative;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+/* hacky fix for firefox Slider container */
+#projects:first-child {
+  max-height: 100%;
+}
+
+.glassmorphism {
+  background: rgba(0, 0, 0, 0.58);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+}
+
+.project-center-reset {
+  position: absolute;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 @layer base {
@@ -23,8 +49,10 @@
 
   p, 
   li, 
-  a {
-    @apply font-Manrope text-sm sm:text-base md:text-lg;
+  a,
+  span,
+  address {
+    @apply font-Manrope text-base sm:text-lg md:text-xl;
   }
 
   body {
@@ -33,9 +61,5 @@
 
   html {
     @apply scroll-smooth;
-  }
-
-  .listHov {
-    @apply hover:text-accent-content;
   }
 }
