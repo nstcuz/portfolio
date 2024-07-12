@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="flex justify-center items-center">
         <a 
           href="#project-anchor"
-          className='absolute mx-auto bottom-8'>
+          className='absolute mx-auto bottom-8 hidden sm:block'>
           <svg
             className='size-8 animate-bounce fill-neutral-content'
             xmlns="http://www.w3.org/2000/svg"

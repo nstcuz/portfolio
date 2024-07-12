@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='site-wrapper bg-base-100'>
       <ScrollToTop />
-      <Link to="#main" className='screen-reader-text hidden text-center'>skip to main</Link>
+      <Link to="#project-anchor" className='screen-reader-text hidden text-center'>skip to main</Link>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
