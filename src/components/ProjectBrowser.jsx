@@ -12,15 +12,6 @@ const ProjectBrowser = () => {
   const navigate = useNavigate();
   const [smallBP, setSmallBP] = useState(window.innerWidth < 980);
 
-  const handleResize = () => {
-    setSmallBP(window.innerWidth < 980);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const settings = {
     infinite: true,
     accessibility: true,
@@ -35,7 +26,7 @@ const ProjectBrowser = () => {
   return (
     <section id='projects' className="relative w-[95vw] h-full py-2 mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-primary to-base-200">
       <span id="project-anchor" className="relative top-[-72px]"></span>
-      <div className={`relative bottom-0 my-auto max-w-[920px] p-2 bg-base-200 shadow-md rounded-2xl bg-opacity-70 ${smallBP ? 'project-center' : 'project-center-reset'}`}>
+        <div className='relative mx-auto my-auto max-w-[920px] p-2 bg-base-200 shadow-md rounded-2xl bg-opacity-70'>
         <Slider ref={slider} {...settings}>
           {projects.map((project, index) => (
             <section key={index}>
