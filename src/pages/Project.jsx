@@ -9,7 +9,7 @@ const Project = () => {
   const project = projects.find(p => p.localURL === localURL);
 
   return (
-    <section className="relative mt-20 w-[95vw] min-h-heightForHome h-max mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-info to-base-200">
+    <section className="relative mt-20 w-[95vw] min-h-full mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-info to-base-200 overflow-hidden">
       <div className="pb-4 mb-4">
         <h1 className="text-3xl font-bold mb-2">{project.title}</h1>
         <a href={project.gitURL} className="flex justify-center items-center">
@@ -25,13 +25,12 @@ const Project = () => {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-2/3 mb-4 md:mr-4 flex flex-col justify-center items-center">
           <img src={project.heroImage} alt={`${project.title} hero`} className="p-4 rounded-lg shadow-lg bg-base-200 bg-opacity-35 max-w-[600px] w-full h-auto object-cover" />
-          
         </div>
         <div className="md:w-1/3 flex flex-col justify-around items-around p-4 rounded-lg shadow-lg bg-base-200 bg-opacity-35">
           <div>
             <div>
               <h2 className="mb-2">Tech Stack</h2>
-              <ul className="flex justify-center items-center space-x-4">
+              <ul className="flex justify-center items-center space-x-4 flex-wrap">
                 {project.stack.map((tech, index) => (
                   <li key={index}>
                     <StackIcon name={tech} className="size-10 get-down" />
@@ -41,7 +40,7 @@ const Project = () => {
             </div>
             <div>
               <h2 className="mb-2">Tools</h2>
-              <ul className="flex justify-center items-center space-x-4">
+              <ul className="flex justify-center items-center space-x-4 flex-wrap">
                 {project.tools.map((tool, index) => (
                   <li key={index}>
                     <StackIcon name={tool} className="size-10 get-down" />
@@ -50,7 +49,7 @@ const Project = () => {
               </ul>
             </div>
             <ul className="min-w-full p-4 rounded-lg shadow-lg bg-base-200 bg-opacity-35 border-2 border-opacity-25 border-neutral-content">
-              <h2>key-points</h2>
+              <h2>Key Points</h2>
               {project.keypoints.map((point, index) => (
                 <li className='list-disc list-inside md:text-left md:ml-8'
                   key={index}>
@@ -63,7 +62,7 @@ const Project = () => {
       </div>
       <div className="mt-4">
       </div>
-      <ProjectButtons currentProject={project} />
+      <ProjectButtons currentProject={project} className="mt-4" />
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='site-wrapper bg-base-100'>
       <ScrollToTop />
-      {/* <Link to="#main" className='screen-reader-text'>skip to main</Link> */}
+      <Link to="#main" className='screen-reader-text hidden text-center'>skip to main</Link>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

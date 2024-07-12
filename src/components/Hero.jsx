@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section id="hero" className="hero relative h-heightHome bg-transparent bg-opacity-95 w-[95vw] mx-auto my-16 md:mt-20 border-2 border-neutral-content rounded-3xl shadow-md">
       <span id="hero-anchor" className="absolute top-[-72px]"></span>
-      <img className='absolute w-full h-full bg-opacity-2 top-0 left-0 rounded-3xl' src="src/assets/aurora-borealis.png" alt=""/>
+      <img className='absolute w-full h-full bg-opacity-2 top-0 left-0 rounded-3xl' src="src/assets/aurora-borealis.png" alt="northern lights overlay"/>
       <div className='aurora-borealis top-0 left-0 rounded-3xl'></div>
       <div className="hero-content text-center">
         <div className="max-w-md">
