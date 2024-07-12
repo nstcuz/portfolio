@@ -15,7 +15,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/project/:localURL" element={<Project />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 };

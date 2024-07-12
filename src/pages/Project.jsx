@@ -9,7 +9,7 @@ const Project = () => {
   const project = projects.find(p => p.localURL === localURL);
 
   return (
-    <section className="relative mt-20 w-[95vw] min-h-full mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-info to-base-200 overflow-hidden">
+    <section className="relative mt-20 w-[95vw] min-h-full md:h-heightHome mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-info to-base-200 overflow-hidden">
       <div className="pb-4 mb-4">
         <h1 className="text-3xl font-bold mb-2">{project.title}</h1>
         <a href={project.gitURL} className="flex justify-center items-center">

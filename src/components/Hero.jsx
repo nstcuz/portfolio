@@ -5,13 +5,13 @@ const Hero = () => {
   return (
     <section id="hero" className="hero relative h-heightHome bg-transparent bg-opacity-95 w-[95vw] mx-auto my-16 md:mt-20 border-2 border-neutral-content rounded-3xl shadow-md">
       <span id="hero-anchor" className="absolute top-[-72px]"></span>
-      <img className='absolute w-full h-full bg-opacity-2 top-0 left-0 rounded-3xl' src="src/assets/aurora-borealis.png" alt="northern lights overlay"/>
+      <img className='absolute w-full h-full bg-opacity-2 top-0 left-0 rounded-3xl' src="/assets/aurora-borealis.png" alt="northern lights overlay"/>
       <div className='aurora-borealis top-0 left-0 rounded-3xl'></div>
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="pop-up text-5xl font-bold selection:text-neutral">{name}</h1>
           <p className="pop-up py-6 pb-2 selection:text-neutral">{title}</p>
-          <a href='#anchor' className="pop-up btn btn-primary mt-10 text-neutral-content border-neutral-content">see my works</a>
+          <a href='#project-anchor' className="pop-up btn btn-primary mt-10 text-neutral-content border-neutral-content">see my works</a>
         </div>
       </div>
       <a 

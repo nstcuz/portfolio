@@ -7,10 +7,10 @@ const About = () => {
   const activity = [
     'making <a href="https://www.instagram.com/p/CfEemv4ojqj/?hl=en&img_index=1"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">focaccia</span></a> a bit too often', 
     'currently riding a <a href="https://faworldentertainment.com/en-ca/collections/hockey"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">hockey</span></a> skateboard',
-    'continuing my mediocre <a href:"https://vanman.shop/collections/vanman-collection"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">skincare</span> </a> routine',
+    'continuing my mediocre <a href="https://vanman.shop/collections/vanman-collection"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">skincare</span> </a> routine',
     'obviously enjoying the occasional <a href="https://yellowdogbeer.com/beers/chase-my-tail/"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">pint</span></a>',
     'listening to more country music than I\'m proud to admit',
-    'building <a href="#anchor"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">websites</span></a>, I even like designing them'
+    'building <a href="#project-anchor"><span class="font-bold text-accent letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">websites</span></a>, I even like designing them'
   ];
 
 //  you can pull the playlist ID out of any playlists URL 

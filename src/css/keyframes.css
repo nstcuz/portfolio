@@ -108,22 +108,3 @@
   .letter-spread:hover {
     animation: letter-spread 1.5s ease-in;
   }
-
-/* background color */
-  @keyframes letter-spread {
-    0% {
-      background-color: 2;
-    }
-    33%{
-      
-    }
-    66%{
-      
-    }100% {
-      
-    }
-  }
-
-  .letter-spread:hover {
-    animation: letter-spread 1.5s ease-in;
-  }

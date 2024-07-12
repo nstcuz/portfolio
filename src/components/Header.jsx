@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="fixed w-[95vw] mt-3 mx-auto top-0 left-0 right-0 z-10 flex justify-center items-center bg-transparent">
-      <nav className="h-10 sm:h-12 md:h-14 flex justify-between items-center w-full border-2 border-neutral-content rounded-full bg-base-100 backdrop-filter backdrop-blur-md bg-opacity-30 border-opacity-1">
+      <nav className="h-10 sm:h-12 flex justify-between items-center w-full border-2 border-neutral-content rounded-full bg-base-100 backdrop-filter backdrop-blur-md bg-opacity-30 border-opacity-1">
         <div className="flex justify-center items-center ml-4">
           <a className='flex justify-center items-center' href="/">
             <svg 

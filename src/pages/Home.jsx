@@ -7,10 +7,10 @@ import Contact from '../components/Contact';
 const Home = () => {
   return (
     <div>
-        <Hero />
-        <ProjectBrowser />
-        <About />
-        <Contact />
+      <Hero />
+      <ProjectBrowser />
+      <About />
+      <Contact />
     </div>
   )
 }

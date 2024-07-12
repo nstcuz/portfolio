@@ -1,6 +1,7 @@
 import React from 'react'
 import StackIcon from "tech-stack-icons";
-import '../assets/woocommerce.png';
+import '/assets/woocommerce.png';
+import '/assets/shopify.png';
 
 function TechStackIcons() {
 
@@ -52,12 +53,12 @@ function TechStackIcons() {
         </div>
 
         <div className='w-fit px-3 py-1 mx-1 mb-1 bg-base-200 inline-flex border-neutral-content shadow-md get-down hover:bg-base-100'>
-            <img src='src/assets/woocommerce.png' className='size-7'/>
+            <img src='/assets/woocommerce.png' className='size-7'/>
             <p className='ml-2 text-center flex items-center'>woocommerce</p>
         </div>
 
         <div className='w-fit px-3 py-1 mx-1 mb-1 bg-base-200 inline-flex border-neutral-content shadow-md get-down hover:bg-base-100'>
-            <img src='src/assets/shopify.png' className='size-7'/>
+            <img src='/assets/shopify.png' className='size-7'/>
             <p className='ml-2 text-center flex items-center'>shopify</p>
         </div>
 

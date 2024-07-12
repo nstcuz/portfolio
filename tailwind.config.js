@@ -23,7 +23,7 @@ module.exports = {
       },
       height: {
         heightHome: 'calc(100vh - 5rem)',
-        heightForProject: 'calc(100vh - 8rem)',
+        heightProject: 'calc(100vh - 2rem)',
 
       },
       width: {
