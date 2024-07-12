@@ -17,11 +17,11 @@ const ProjectButtons = ({ currentProject }) => {
   };
 
   return (
-    <div className="flex justify-between sm:mx-[25%] mt-8">
-      <button onClick={handlePrevProject} className="btn">
+    <div className="flex justify-around sm:mx-[25%] mt-8 lg:justify-between lg:mt-24">
+      <button onClick={handlePrevProject} className="btn left-[25%]">
         previous project
       </button>
-      <button onClick={handleNextProject} className="btn">
+      <button onClick={handleNextProject} className="btn right-[25%]">
         next project
       </button>
     </div>

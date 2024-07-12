@@ -33,10 +33,10 @@ const ProjectBrowser = () => {
   };
 
   return (
-    <section id='projects' className="relative w-[95vw] h-heightHome mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-primary to-base-200">
+    <section id='projects' className="relative w-[95vw] h-full py-2 mx-auto border-2 border-neutral-content rounded-3xl shadow-md p-4 text-center bg-gradient-to-b from-base-200 via-primary to-base-200">
       <span id="project-anchor" className="relative top-[-72px]"></span>
-      <div className={`my-auto max-w-[920px] p-2 bg-base-200 shadow-md rounded-2xl bg-opacity-70 ${smallBP ? 'project-center ' : 'project-center-reset'}`}>
-        <Slider ref={slider} {...settings} className='max-h-heightFirefox '>
+      <div className={`relative bottom-0 my-auto max-w-[920px] p-2 bg-base-200 shadow-md rounded-2xl bg-opacity-70 ${smallBP ? 'project-center' : 'project-center-reset'}`}>
+        <Slider ref={slider} {...settings}>
           {projects.map((project, index) => (
             <section key={index}>
               <h2 className="mb-2">{project.title}</h2>
@@ -78,7 +78,7 @@ const ProjectBrowser = () => {
                     </div>
                   </div>
                 </div>
-                <a className='btn btn-primary mt-4' onClick={() => handleMoreDetailsClick(project.localURL)}>
+                <a className='btn btn-primary mt-2' onClick={() => handleMoreDetailsClick(project.localURL)}>
                   more details <span className='text-4xl mb-2'>&#8702;</span>
                 </a>
               </div>
@@ -89,7 +89,7 @@ const ProjectBrowser = () => {
         <button className='text-3xl ml-2' onClick={() => slider?.current?.slickNext()}>&#8594;</button>
       </div>
     </section>
-  );
+  )
 };
 
 export default ProjectBrowser;

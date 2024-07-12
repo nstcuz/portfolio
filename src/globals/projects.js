@@ -34,7 +34,7 @@ const projects = [
     title: "Capstone Project",
     gitURL: "https://github.com/htpwebdesign/wcss-theme",
     heroImage: "/assets/capstone-hero.svg",
-    description: "The final project for my front-end web development course at BCIT. we had to make a store using the woocommerce plugin for wordpress. it was a 4 person gowup project that taught us how a workflow works with many people. ensuring we learn good communication, managment, and planning skills when creating a website. this project had a very different approach as not only did it help solidify my wordpress, php & development skills. it really put the focus on the importance of non developing stages and reminded me how important is to modularize your tasks, breaking them into tangible pieces.",
+    description: "Created a store using the woocommerce plugin for wordpress. it was a 4 person project which taught us how a workflow works with many people. ensuring we learn good communication, managment, and planning skills when creating a website. this project had a very different approach as not only did it help solidify my wordpress development skills. it really put the focus on the importance of the non developing stages.",
     keypoints: [
       'using woocommerce\'s built in hooks and wordpresses function to manipulate the layout of the data on the website.',
       'creating a child theme for wordpress from scratch.',
