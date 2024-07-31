@@ -3,6 +3,8 @@ import TechStackIcons from './TechStackIcons';
 import ToolStackIcons from './ToolStackIcons';
 import Music from './Music';
 
+
+
 const About = () => {
   const activity = [
     'making <a href="https://www.instagram.com/p/CfEemv4ojqj/?hl=en&img_index=1"><span class="font-bold text-[#70acc6] letter-spread hover:border-transparent hover:border-b-neutral hover:border-dashed hover:border-b-2">focaccia</span></a> a bit too often', 
